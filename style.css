@@ -1,15 +1,26 @@
  :root {
-        --bda-global-nav-color: rgb(112, 112, 112);
-        --ramba-secion-color: yellow;
-        --bg-color: white;
-        --text-main: #111111;
+        --bda-global-nav-color:  #1a2238;
+        --ramba-secion-color: #f9fbfd;
+        --bg-color: #f9fbfd;
+        --text-main: #ff4500;
         --text-muted: #666666;
-        --text-light: #888888;
         --border-color: #eeeeee;
         --font-serif: "Playfair Display", Georgia, serif;
         --font-sans: "Inter", system-ui, -apple-system, sans-serif;
         --container-max-width: 1200px; /* वेबसाइट के मुख्य कंटेंट की अधिकतम चौड़ाई */
-      }
+        --primary-color: #1a2238;   /* Deep Blue Theme */
+        --accent-color: #ff4500;    /* Vibrant Action Orange */
+        --text-dark: #333333;
+        --text-light: #666666;
+        --bg-light: #f9fbfd;
+        --white: #ffffff;
+        --error-red: #ef4444;
+        --success-green: #22c55e;
+        --bda-hamburger: #1a2238;
+        --bda-nav-container: #1a2238;
+        --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 
       * {
         box-sizing: border-box;
@@ -17,9 +28,9 @@
         padding: 0;
       }
 
-      body {
+      .body {
         font-family: var(--font-sans);
-        background-color: var(--bg-color);
+        background-color: var(--bda-global-nav-color);
         color: var(--text-main);
         line-height: 1.7;
         padding: 0;
@@ -36,14 +47,18 @@
     z-index: 10001 ;
     width: 100% ;
     font-family: var(--font-serif);  
-    border: 1px solid #b8b5b5;  
+    border: 1px solid #b8b5b5; 
+    color: var(--text-light);
+     
 }
 .bda-brand-logo {
-    color: #ffffff ;
+    color: var(--auth-bg-light);
     font-size: 1.75rem ;
     font-weight: 800 ;
     text-decoration: none ;
     letter-spacing: 1px ;
+    
+    
 }
 
 .bda-nav-menu {
@@ -52,15 +67,20 @@
     gap: 1.75rem ;
     margin: 0 ;
     padding: 0 ;
+    color: var(--auth-orange);
+    
 }
 
 .bda-nav-menu a {
-    color: #fff ;
+    color: var(--auth-orange);
     text-decoration: none ;
     font-weight: 500 ;
     font-size: 22px ;
     /*opacity: 0.85 ;*/
     transition: all 0.2s ease ;    
+    background-color: var(--bda-global-nav-color);
+    
+
 }
 
 .bda-nav-menu a:hover, 
@@ -118,75 +138,6 @@
     box-shadow: 0 8px 25px rgba(255,255,255,0.2) ;
     background-color: #f9fafb ;
 }
-/*------footer----------*/
-/* --- 3. Premium 3-Column Footer --- */
-.bda-main-footer {
-    background-color: #5d5d5d ; 
-    color: #e5e7eb ;
-    padding: 4rem 1.5rem 2rem ;
-    border-top: 1px solid rgba(255,255,255,0.1) ;
-    width: 100% ;
-    box-sizing: border-box ;
-}
-
-.bda-footer-grid {
-    max-width: 1200px ;
-    margin: 0 auto ;
-    display: grid ;
-    grid-template-columns: 4fr 4fr 4fr ;
-    gap: 3rem ;
-    box-sizing: border-box ;
-}
-
-.bda-footer-col h3 {
-    color: #ffffff ;
-    font-size: 1.35rem ;
-    margin-bottom: 1.5rem ;
-    font-weight: 700 ;
-}
-
-.bda-logo-green {
-    color: #22c55e ; /* Green Logo Text */
-}
-
-.bda-footer-col p {
-    font-size: 0.95rem ;
-    color: #d1d5db ;
-    margin-bottom: 0.75rem ;
-    line-height: 1.6 ;
-}
-
-.bda-footer-links {
-    list-style: none ;
-    padding: 0 ;
-    margin: 0 ;
-}
-
-.bda-footer-links li {
-    margin-bottom: 0.75rem ;
-}
-
-.bda-footer-links a {
-    color: #d1d5db ;
-    text-decoration: none ;
-    font-size: 0.95rem ;
-    transition: color 0.2s ease ;
-}
-
-.bda-footer-links a:hover {
-    color: #ffffff ;
-}
-
-.bda-footer-bottom {
-    text-align: center ;
-    max-width: 1200px ;
-    margin: 2.5rem auto 0 ;
-    padding-top: 2rem ;
-    border-top: 1px solid rgba(255,255,255,0.1) ;
-    font-size: 0.9rem ;
-    color: #9ca3af ;
-}
-
 /* --- 📱 Smart Responsive Rules --- */
 @media (max-width: 992px) {
     .bda-footer-grid { grid-template-columns: 1fr 1fr ; }
@@ -295,6 +246,7 @@
     margin-right: 2rem ;
     font-size: 30px;
     font-weight: 600;
+    color: var(--accent-color);
 }
 
 .bda-nav-menu {
@@ -304,6 +256,7 @@
     margin: 0 ;
     padding: 0 ;
     flex-grow: 1 ; 
+    
 }
 
 .bda-nav-menu a:hover, 
@@ -341,6 +294,7 @@
     font-size: 0.9rem ;
     outline: none ;
     width: 180px ;
+    
 }
 
 .bda-search-input::placeholder {
@@ -371,12 +325,13 @@
     border: none ;
     cursor: pointer ;
     padding: 0 ;
+    
 }
 
 .bda-hamburger span {
     width: 100% ;
     height: 2.5px ;
-    background-color: #ffffff ;
+    background-color: var(--accent-color) ;
     border-radius: 2px ;
     transition: all 0.3s ease ;
 }
@@ -412,7 +367,7 @@
         display: block ;
         background: transparent ;
         border: none ;
-        color: #ffffff ;
+        color: var(--accent-color) ;
         font-size: 1.25rem ;
         cursor: pointer ;
     }
@@ -448,7 +403,7 @@
         top: 100% ;
         left: 0 ;
         width: 100% ;
-        background-color: #5d5d5d ;
+        background-color: var(--auth-bg-light);
         padding: 0 ;
         gap: 0 ;
         max-height: 0 ;
@@ -559,7 +514,7 @@
 /* ======== BIHAR DRUGS AGENCY (BDA) - NEW bda-global-nav FRAMEWORk STARTS  ========= */
 /* --- 1. Top Navbar Styling --- */
 
-      :root {
+     /* :root {
         --bg-color: ##f9fbfd;
         --text-kain: #111111;
         --text-muted: #666666;
@@ -568,7 +523,7 @@
         --font-serif: "Playfair Display", Georgia, serif;
         --font-sans: "Inter", system-ui, -apple-system, sans-serif;
       }
-
+*/
       * {
         box-sizing: border-box;
         margin: 0;
@@ -617,7 +572,7 @@
 
       /* Responsive Layout Framework */
       .kain-container {
-        padding: 15px;
+        padding: 1px;
         max-width: 1200px;
         margin: 60px auto;
         display: grid;
@@ -736,18 +691,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --primary-color: #1a2238;   /* Dark Blue - Jo aapke bda-global-nav ka color hai */
-    --accent-color: #ff4500;    /* Premium Orange - Jo aapke search button ka hai */
+/*:root {
+    --primary-color: #1a2238;   /* Dark Blue - Jo aapke bda-global-nav ka color hai *
+    --accent-color: #ff4500;    * Premium Orange - Jo aapke search button ka hai *
     --text-dark: #333333;
     --text-light: #666666;
     --bg-light: #f9fbfd;
     --white: #ffffff;
-}
+}*/
 
 body {
-    background-color: var(--white);
-    color: var(--text-dark);
+    background-color: var(--auth-bg-light);
+    color: var(--auth-orange);
     line-height: 1.6;
 }
 
@@ -999,16 +954,20 @@ body {
  /*-- ===============About Core values Page Ends=========================--*/
  /*-- ===============About Brands we deal with page starts==================*/
  /* --- Global Theme Sync (Agar pehle se bani hai to duplicate na karein) --- */
-:root {
-    --primary-color: #1a2238;   /* Dark Blue - Jo aapke bda-global-nav ka color hai */
-    --accent-color: #ff4500;    /* Premium Orange */
+/*:root {
+    --primary-color: #1a2238;   /* Dark Blue - Jo aapke bda-global-nav ka color hai *
+    --accent-color: #ff4500;    * Premium Orange *
     --text-dark: #333333;
     --text-light: #666666;
     --bg-light: #f8fafc;
     --white: #ffffff;
     --border-color: #e2e8f0;
+}*/
+body {
+    background-color: var(--auth-bg-light);
+    color: var(--auth-orange);
+    line-height: 1.6;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1179,9 +1138,9 @@ body {
  /*-- ===============About Brands we deal with page starts==================*/
   /*-- ======================Reach Us page Ends ==========================--*/
   /* --- Core Styling Architecture & Variable Palette --- */
-:root {
-    --primary-color: #1a2238;   /* Deep Blue Theme */
-    --accent-color: #ff4500;    /* Vibrant Action Orange */
+/*:root {
+    --primary-color: #1a2238;   /* Deep Blue Theme *
+    --accent-color: #ff4500;    /* Vibrant Action Orange *
     --text-dark: #333333;
     --text-light: #666666;
     --bg-light: #f9fbfd;
@@ -1189,8 +1148,12 @@ body {
     --error-red: #ef4444;
     --success-green: #22c55e;
     --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}*/
+body {
+    background-color: var(--auth-bg-light);
+    color: var(--auth-orange);
+    line-height: 1.6;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1360,7 +1323,7 @@ body {
     padding: 0 6px;
     color: #94a3b8;
     font-size: 15px;
-    pointer-events: none;
+    pointer-events: auto;
     transition: var(--transition-smooth);
 }
 
@@ -1481,6 +1444,11 @@ body {
 }
   /*-- ======================Reach Us page Ends ==========================--*/
   /*==========Floating WhatsApp & Map Button Starts==============*/
+  body {
+    background-color: var(--auth-bg-light);
+    color: var(--auth-orange);
+    line-height: 1.6;
+}
   .floating-contact-panel {
     position: fixed;
     bottom: 25px;       /* Screen ke bottom se distance */
@@ -1499,7 +1467,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--auth-bg-light);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-decoration: none;
@@ -1566,21 +1534,21 @@ body {
         width: 70px;     /* बटन का साइज */
         height: 70px;
         z-index: 2000;    /* ताकि यह बाकी कंटेंट के ऊपर तैरता रहे */
-        background: #ffffff;
+        background: var(--auth-bg-light);
         border-radius: 25px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         padding: 5px;
         transition: transform 0.2s ease;  
         width: 50px;
         height: 50px;
-        background: #ffffff;
+        background: var(--auth-bg-light);
         border-radius: 50% 50% 50% 0;
         transform: rotate(-45deg);
         display: flex;
         justify-content: center;
         transition: transform 0.2s ease;   
         align-items: center; 
-        border-color: #0408fa;
+        border-color: var(--accent-color);
     }
     /* बटन के अंदर आपकी भेजी हुई मैप इमेज सेट करना */
     .mobile-map-btn img {
@@ -1601,7 +1569,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* पीछे का बैकग्राउंड डार्क करेगा */
+        background-color: var(--accent-color); /* पीछे का बैकग्राउंड डार्क करेगा */
         z-index: 2000; /* सबसे ऊपर दिखेगा */
         justify-content: center;
         align-items: center;
@@ -1610,7 +1578,7 @@ body {
 
     .map-modal-content {
         position: relative;
-        background-color: #fff;
+        background-color: var(--auth-bg-light);
         padding: 10px;
         border-radius: 12px;
         max-width: 90%;
@@ -1630,7 +1598,7 @@ body {
         position: absolute;
         bottom: -35px;
         right: -7px;
-        color: #fff;
+        color: var(--auth-bg-light);
         font-size: 35px;
         font-weight: bold;
         cursor: pointer;
@@ -1638,7 +1606,7 @@ body {
 }
 /*==========Floating WhatsApp & Map Ends==============*/
 /*==========Footer page starts========================*/
-:root {
+/*:root {
             --primary: #2563eb;
             --primary-hover: #1d4ed8;
             --success: #16a34a;
@@ -1650,7 +1618,7 @@ body {
             --border-color: #e5e7eb;
             --radius: 12px;
             --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        }*/
          * {
             box-sizing: border-box;
             margin: 0;
@@ -1658,7 +1626,7 @@ body {
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-body);
+            background-color: var(--auth-bg-light);
             color: var(--text-main);
             line-height: 1.5;
             padding: 0px 0px;
@@ -1667,7 +1635,7 @@ body {
 
 
 .bda-f-main-footer {
-    background-color: #5d5d5d; 
+    background-color: var(--bda-global-nav-color); 
     /*--- color bad me karenge 1 oct-- Deep dark base color with a sharp, glossy light reflection reflection *
     background: linear-gradient(
     90deg, 
@@ -1686,7 +1654,7 @@ body {
     
   border: 1px solid #ffffff;
 
-    color: #ffffff ;
+    color: var(--accent-color) ;
     padding: 3rem 1.5rem ;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif ;
     width: 100% ;
@@ -1711,7 +1679,7 @@ body {
     font-size: 2.25rem ;
     font-weight: 700 ;
     margin-bottom: 1.5rem ;
-    color: #ffffff ;
+    color: var(--accent-color) ;
 }
 
 .bda-f-logo-cyan {
@@ -1725,7 +1693,7 @@ body {
 }
 
 .bda-f-quick-links a {
-    color: #ffffff ;
+    color: var(--accent-color);
     text-decoration: none ;
     margin: 0 4px ;
     transition: opacity 0.2s ;
@@ -1738,7 +1706,7 @@ body {
 .bda-f-brand-name {
     font-size: 1.15rem ;
     font-weight: 700 ;
-    color: #ffffff ;
+    color: var(--accent-color) ;
 }
 
 /*---Contact Info with Custom SVG Icons)-----*/
@@ -1757,42 +1725,40 @@ body {
 .bda-f-icon-circle {
     width: 42px ;
     height: 42px ;
-    background-color: #3e3e3e ; 
+    background-color: var(--auth-bg-light); 
     /* Deep dark base color with a sharp, glossy light reflection reflection */
-    background: linear-gradient(
+    /*background: linear-gradient(
     90deg, 
     #fffefe65 100%, 
     #ffe9e9 100%, 
     #ebebff 100%, 
     #ebe5e5 100%, 
-    #c2d6e4 100%
-  );
+    #c2d6e4 100%*/
+    background: var(--accent-color);
   
   /* Multi-layered shadows: inner glow for depth, sharp outer drop shadow */
   box-shadow: 
-    inset 0 1px 0 rgba(253, 251, 251, 0.219), 
-    inset 0 -1px 3px rgba(180, 177, 177, 0.8),
-    0 4px 15px rgba(235, 231, 231, 0.6);
+    var(--auth-bg-light);
     
-  border: 1px solid #ffffff;
+  border: 1px solid var(--auth-bg-light);
 
-    border-radius: 50% ;
-    display: flex ;
-    align-items: center ;
-    justify-content: center ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0 ;
 }
 
 .bda-f-icon-circle svg {
     width: 20px ;
     height: 20px ;
-    fill: #ffffff ;
+    fill: var(--auth-bg-light);
 }
 
 .bda-f-info-text {
     font-size: 0.95rem ;
     line-height: 1.4 ;
-    color: #f3f4f6 ;
+    color: var(--accent-color);
 }
 
 /*------About Company Sociel Media block-----*/
@@ -1800,13 +1766,13 @@ body {
     font-size: 1.1rem ;
     font-weight: 700 ;
     margin-bottom: 1rem ;
-    color: #ffffff ;
+    color: var(--accent-color);
 }
 
 .bda-f-about-text {
     font-size: 0.88rem ;
     line-height: 1.6 ;
-    color: #e5e7eb ;
+    color: var(--accent-color);
     margin-bottom: 1.5rem ;
 }
 
@@ -1818,7 +1784,7 @@ body {
 .bda-f-social-box {
     width: 36px ;
     height: 36px ;
-    background-color: #ffffff ; /* Sociel icon White box */
+    background-color: var(--auth-bg-light); /* Sociel icon White box */
     border-radius: 4px ;
     display: flex ;
     align-items: center ;
@@ -1829,20 +1795,23 @@ body {
 
 .bda-f-social-box:hover {
     transform: translateY(-3px) ;
+    
 }
 
 .bda-f-social-box svg {
     width: 18px ;
     height: 18px ;
-    fill: #5d5d5d ; /* Inbox colo */
+    fill: var(--accent-color) ; /* Inbox colo */
 }
 
 /* --- 📱 2.Mobile & tablet responsive --- */
 @media (max-width: 768px) {
-    body .bda-f-footer-container {
+    body .bda-f-footer-container  {
         grid-template-columns: 1fr ; /* 1 column Layot */
         gap: 3rem ;
         text-align: center ; /* All items align centre */
+        
+
     }
 
     body .bda-f-info-row {
@@ -3058,7 +3027,7 @@ body {
     .auth-overlay .close-modal-btn {
         color: #ffffff ;
         right: 15px ;
-        top: 12px ;
+        top: 80px ;
         font-size: 2.2rem ;
     }
 }
