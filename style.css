@@ -1,0 +1,3185 @@
+ :root {
+        --bda-global-nav-color: rgb(112, 112, 112);
+        --ramba-secion-color: yellow;
+        --bg-color: white;
+        --text-main: #111111;
+        --text-muted: #666666;
+        --text-light: #888888;
+        --border-color: #eeeeee;
+        --font-serif: "Playfair Display", Georgia, serif;
+        --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+        --container-max-width: 1200px; /* वेबसाइट के मुख्य कंटेंट की अधिकतम चौड़ाई */
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.7;
+        padding: 0;
+      }
+/* ======== BIHAR DRUGS AGENCY (BDA) - NEW bda-global-nav FRAMEWORk STARTS  
+=========*/
+.bda-global-nav {
+    background-color: var(--bda-global-nav-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) ;
+    padding: 1.5rem 0;
+    position: fixed ;
+    top: 0 ;
+    left: 0;
+    z-index: 10001 ;
+    width: 100% ;
+    font-family: var(--font-serif);  
+    border: 1px solid #b8b5b5;  
+}
+.bda-brand-logo {
+    color: #ffffff ;
+    font-size: 1.75rem ;
+    font-weight: 800 ;
+    text-decoration: none ;
+    letter-spacing: 1px ;
+}
+
+.bda-nav-menu {
+    display: flex ;
+    list-style: none ;
+    gap: 1.75rem ;
+    margin: 0 ;
+    padding: 0 ;
+}
+
+.bda-nav-menu a {
+    color: #fff ;
+    text-decoration: none ;
+    font-weight: 500 ;
+    font-size: 22px ;
+    /*opacity: 0.85 ;*/
+    transition: all 0.2s ease ;    
+}
+
+.bda-nav-menu a:hover, 
+.bda-nav-menu a.bda-active {
+    opacity: 1 ;
+    border-bottom: 2px solid #ffffff ;
+    padding-bottom: 4px ;
+}
+
+/* --- 2. Hero bda-global-nav Banner --- */
+.backgrounimage-page {
+    position: relative ;
+    /* Dark Background Shop Image */
+    background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.85)), 
+                url('https://unsplash.com') no-repeat center center/cover ;
+    padding: 7rem 1.5rem ;
+    text-align: center ;
+    color: #ffffff ;
+    width: 100% ;
+    box-sizing: border-box ;
+}
+
+.bda-hero-title {
+    font-size: 3rem ;
+    font-weight: 800 ;
+    margin-bottom: 1rem ;
+    letter-spacing: -0.5px ;
+    line-height: 1.2 ;
+}
+
+.bda-hero-subtitle {
+    font-size: 1.25rem ;
+    max-width: 650px ;
+    margin: 0 auto 2.5rem ;
+    color: #d1d5db ;
+    line-height: 1.6 ;
+}
+
+.bda-call-btn {
+    display: inline-flex ;
+    align-items: center ;
+    background-color: #ffffff ;
+    color: rgb(156, 155, 155) ;
+    padding: 0.85rem 2.5rem ;
+    border-radius: 8px ;
+    font-weight: 700 ;
+    text-decoration: none ;
+    font-size: 1.1rem ;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.1) ;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+
+.bda-call-btn:hover {
+    transform: translateY(-3px) ;
+    box-shadow: 0 8px 25px rgba(255,255,255,0.2) ;
+    background-color: #f9fafb ;
+}
+/*------footer----------*/
+/* --- 3. Premium 3-Column Footer --- */
+.bda-main-footer {
+    background-color: #5d5d5d ; 
+    color: #e5e7eb ;
+    padding: 4rem 1.5rem 2rem ;
+    border-top: 1px solid rgba(255,255,255,0.1) ;
+    width: 100% ;
+    box-sizing: border-box ;
+}
+
+.bda-footer-grid {
+    max-width: 1200px ;
+    margin: 0 auto ;
+    display: grid ;
+    grid-template-columns: 4fr 4fr 4fr ;
+    gap: 3rem ;
+    box-sizing: border-box ;
+}
+
+.bda-footer-col h3 {
+    color: #ffffff ;
+    font-size: 1.35rem ;
+    margin-bottom: 1.5rem ;
+    font-weight: 700 ;
+}
+
+.bda-logo-green {
+    color: #22c55e ; /* Green Logo Text */
+}
+
+.bda-footer-col p {
+    font-size: 0.95rem ;
+    color: #d1d5db ;
+    margin-bottom: 0.75rem ;
+    line-height: 1.6 ;
+}
+
+.bda-footer-links {
+    list-style: none ;
+    padding: 0 ;
+    margin: 0 ;
+}
+
+.bda-footer-links li {
+    margin-bottom: 0.75rem ;
+}
+
+.bda-footer-links a {
+    color: #d1d5db ;
+    text-decoration: none ;
+    font-size: 0.95rem ;
+    transition: color 0.2s ease ;
+}
+
+.bda-footer-links a:hover {
+    color: #ffffff ;
+}
+
+.bda-footer-bottom {
+    text-align: center ;
+    max-width: 1200px ;
+    margin: 2.5rem auto 0 ;
+    padding-top: 2rem ;
+    border-top: 1px solid rgba(255,255,255,0.1) ;
+    font-size: 0.9rem ;
+    color: #9ca3af ;
+}
+
+/* --- 📱 Smart Responsive Rules --- */
+@media (max-width: 992px) {
+    .bda-footer-grid { grid-template-columns: 1fr 1fr ; }
+}
+
+@media (max-width: 768px) {
+    .bda-hero-title { font-size: 2.25rem ; }
+    .bda-footer-grid { grid-template-columns: 1fr ; gap: 2rem ; }
+    .bda-nav-menu { display: none ; } 
+}
+/**------footer--------*/
+/* --- Hemberg Buttun Style (it will be hiden by defalt in large screen) --- */
+.bda-hamburger {
+    display: none ;
+    flex-direction: column ;
+    justify-content: space-between ;
+    width: 30px ;
+    height: 21px ;
+    background: transparent ;
+    border: none ;
+    cursor: pointer ;
+    padding: 0 ;
+    z-index: 10001 ;
+}
+
+.bda-hamburger span {
+    width: 100% ;
+    height: 3px ;
+    background-color: #ffffff ;
+    border-radius: 2px ;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+
+/* --- 📱 Mobile screen's Responsive Rules  --- */
+@media (max-width: 768px) {
+    .bda-hamburger {
+        display: flex ; /* Hembuerg button Will show */
+    }
+
+    /* in Mobile menu will be drop down type in sparate box  */
+    body .bda-nav-menu {
+        display: flex ;
+        flex-direction: column ;
+        position: absolute ;
+        top: 100% ;
+        left: 0 ;
+        width: 100% ;
+        background-color: #5d5d5d ; 
+        padding: 0 ;
+        gap: 0 ;
+        max-height: 0 ; 
+        overflow: hidden ;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1) ; /* Smooth Opening*/
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1) ;
+    }
+
+    body .bda-nav-menu li {
+        width: 100% ;
+        border-top: 1px solid rgba(255,255,255,0.05) ;
+    }
+
+    body .bda-nav-menu a {
+        display: block ;
+        padding: 1.25rem 1.5rem ;
+        width: 100% ;
+    }
+
+    body .bda-nav-menu a:hover, 
+    body .bda-nav-menu a.bda-active {
+        background-color: rgba(255,255,255,0.1) ;
+        border-bottom: none ;
+        padding-bottom: 1.25rem ;
+    }
+
+    /* --- 🌟 JAvscript se active classes --- */
+    /* When Menu will open (Max-height will get Greater) */
+    body .bda-nav-menu.bda-menu-open {
+        max-height: 400px ; 
+    }
+    /* Animation for turning Hmeburg to 'x' */
+    .bda-hamburger.bda-close-toggle span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg) ;
+    }
+    .bda-hamburger.bda-close-toggle span:nth-child(2) {
+        opacity: 0 ; 
+    }
+    .bda-hamburger.bda-close-toggle span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg) ;
+    }
+    }
+
+.bda-nav-container {
+    max-width: 1200px ;
+    margin: 0 auto ;
+    padding: 0 1.5rem ;
+    display: flex ;
+    align-items: center ;
+    box-sizing: border-box ;
+}
+
+/* logo and Links to be kept left side (setting) */
+.bda-brand-logo {
+    color: #ffffff ;
+    text-decoration: none ;
+    letter-spacing: 2px ;
+    margin-right: 2rem ;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.bda-nav-menu {
+    display: flex ;
+    list-style: none ;
+    gap: 1.5rem ;
+    margin: 0 ;
+    padding: 0 ;
+    flex-grow: 1 ; 
+}
+
+.bda-nav-menu a:hover, 
+.bda-nav-menu a.bda-active {
+    opacity: 1 ;
+    border-bottom: 2px solid #ffffff ;
+    padding-bottom: 4px ;
+}
+
+/* --- 2. Desktop Search Bar with orange Button --- */
+.bda-search-wrapper {
+    position: relative ;
+}
+
+.bda-mobile-search-trigger {
+    display: none ; /* on Desktop Mobile icon will hide */
+}
+
+.bda-search-form {
+    display: flex ;
+    align-items: center ;
+    border: 2px solid #ffffff ;
+    background-color: transparent ;
+    border-radius: 2px ;
+    overflow: hidden ;
+    height: 40px;
+    min-width: 18%;
+}
+
+.bda-search-input {
+    background-color: transparent ;
+    border: none ;
+    padding: 0.4rem 0.75rem ;
+    color: #ffffff ;
+    font-size: 0.9rem ;
+    outline: none ;
+    width: 180px ;
+}
+
+.bda-search-input::placeholder {
+    color: #cccccc ;
+    opacity: 0.7 ;
+}
+
+.bda-search-btn {
+    background-color: #ff3d00 ; 
+    color: #ffffff ;
+    padding: 15px;
+    cursor: pointer ;
+    font-size: 17px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    border-radius: 2px solid;
+}
+
+/* --- 3. Hemberg Button Base Design--- */
+.bda-hamburger {
+    display: none ;
+    flex-direction: column ;
+    justify-content: space-between ;
+    width: 24px ;
+    height: 18px ;
+    background: transparent ;
+    border: none ;
+    cursor: pointer ;
+    padding: 0 ;
+}
+
+.bda-hamburger span {
+    width: 100% ;
+    height: 2.5px ;
+    background-color: #ffffff ;
+    border-radius: 2px ;
+    transition: all 0.3s ease ;
+}
+
+/* --- 📱 4. Mobile Tablet screen Responsive Rules --- */
+@media (max-width: 768px) {
+    .bda-nav-container {
+        justify-content: space-between ; 
+    }
+
+    /* Hemburg Will show left side */
+    .bda-hamburger {
+        display: flex ;
+        order: 1 ;
+    }
+
+    /* Logo will come in middle */
+    .bda-brand-logo {
+        order: 2 ;
+        margin: 0 auto ;
+        position: absolute ;
+        left: 50% ;
+        transform: translateX(-50%) ;
+    }
+
+    /* Search raper will be Right side  */
+    .bda-search-wrapper {
+        order: 3 ;
+    }
+
+    /* On Mobile Inplace of Search bar only Search Icin Will show */
+    .bda-mobile-search-trigger {
+        display: block ;
+        background: transparent ;
+        border: none ;
+        color: #ffffff ;
+        font-size: 1.25rem ;
+        cursor: pointer ;
+    }
+
+    /* Mobile Search Form  will be hidden when triggered will show below */
+    body .bda-search-form {
+        display: none ;
+        position: absolute ;
+        top: 100% ;
+        right: 0 ;
+        background-color: #5d5d5d ;
+        width: 220px ;
+        margin-top: 0.75rem ;
+        border: 1px solid #5d5d5d ;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) ;
+    }
+
+    /* When java script Class will be Activated then Mobile search Box will show */
+    body .bda-search-form.bda-search-open {
+        display: flex ;
+    }
+
+    body .bda-search-input {
+        width: 100% ;
+        padding: 0.5rem ;
+    }
+
+    /* Mobile Slide Down menu links */
+    body .bda-nav-menu {
+        display: flex ;
+        flex-direction: column ;
+        position: absolute ;
+        top: 100% ;
+        left: 0 ;
+        width: 100% ;
+        background-color: #5d5d5d ;
+        padding: 0 ;
+        gap: 0 ;
+        max-height: 0 ;
+        overflow: hidden ;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1) ;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1) ;
+    }
+
+    body .bda-nav-menu li {
+        width: 100% ;
+        border-top: 1px solid rgba(255,255,255,0.05) ;
+        
+
+    }
+
+    body .bda-nav-menu a {
+        display: block ;
+        padding: 1.25rem 1.5rem ;
+    }
+
+    body .bda-nav-menu.bda-menu-open {
+        max-height: 400px ;
+    }
+
+    /* Hemburg to close & turn into 'x' mark */
+    .bda-hamburger.bda-close-toggle span:nth-child(1) { transform: translateY(7.5px) rotate(45deg) ; }
+    .bda-hamburger.bda-close-toggle span:nth-child(2) { opacity: 0 ; }
+    .bda-hamburger.bda-close-toggle span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg) ; }
+}
+/* ======== BIHAR DRUGS AGENCY (BDA) - NEW bda-global-nav FRAMEWORk ENDS  ========= */
+/* =====  BIHAR DRUGS AGENCY (BDA) - HOME PAGE/SHOP BACKGROUND IMAGE FRAMWORK STARTS======= */
+
+/* 1. Flex look for Eliments on Homepage */
+.backgrounimage-page {
+    position: relative;
+    z-index: 1;
+    isolation: isolate; /*asure content don't get hedden before background */
+    min-height: 100vh;
+    margin: 0;
+
+    /* ---- Home Page Text  & other Icon settings---- */
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;       
+    padding: 0 20px;          
+}
+
+/* 2. Pseudo-element will handle Background  image */
+.backgrounimage-page::before {
+    content: "";
+    position: absolute; /* will fix image on sceen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* image path */
+    background-image: url('assets/Shop\ Bakground\ image.png'); 
+    
+    /* making image fully responsive  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* control opecity from here */
+    opacity: 0.2; 
+    
+    /* to push background  bihind the content */
+    z-index: -1; /* attenttion please keep it -1 so that background must be before content */
+}
+/**-------------- Css for text & button----------------------**/
+.bda-hero-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.bda-hero-subtitle {
+    font-size: 1.2rem;
+    color: #dddddd;
+    max-width: 600px; /* Paragraph will be stricted and will not get wider */
+    margin-bottom: 10px;
+}
+
+.bda-call-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+
+.bda-call-btn:hover {
+    background-color: #ff4500; 
+    color: #ffffff;
+    transform: scale(1.05); /* slidly bigger effect on hover */
+}
+/* ===============SHOP BACKGROUND IMAGE FRAMWORK ENDS======================= */
+/* =====================About Page Starts=================================== */
+/* ======1. GENERAL RESET & TYPOGRAPHY====== */
+
+/* ======== BIHAR DRUGS AGENCY (BDA) - NEW bda-global-nav FRAMEWORk STARTS  ========= */
+/* --- 1. Top Navbar Styling --- */
+
+      :root {
+        --bg-color: ##f9fbfd;
+        --text-kain: #111111;
+        --text-muted: #666666;
+        --text-light: #888888;
+        --border-color: #eeeeee;
+        --font-serif: "Playfair Display", Georgia, serif;
+        --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--bg-color);
+        color: var(--text-kain);
+        line-height: 1.7;
+        padding: 0;
+      }
+
+      /* pavigation thebda-global-nav */
+      thebda-global-nav {
+        text-align: center;
+        padding: 40px 0 20px 0;
+        border-bottom: 1px solid var(--border-color);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      pav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        list-style: none;
+      }
+
+      pav a {
+        text-decoration: none;
+        color: var(--text-kain);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      pav a:hover {
+        color: var(--text-light);
+      }
+
+      /* Responsive Layout Framework */
+      .kain-container {
+        padding: 15px;
+        max-width: 1200px;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: 1fr; /* Mobile view: 1 Column */
+        gap: 40px;
+        align-items: start;
+      }
+
+      /* Desktop View Upgrade (min-width: 868px) */
+      @media (min-width: 868px) {
+        .kain-container {
+          grid-template-columns: 1.1fr 0.9fr; /* Side-by-side Layout */
+          gap: 80px;
+        }
+      }
+
+      /* Left Column Text Styles */
+      .thecontent-section {
+        padding-right: 0;
+      }
+
+      @media (min-width: 868px) {
+        .thecontent-section {
+          padding-right: 40px;
+        }
+      }
+
+      theh1 {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: var(--text-kain);
+      }
+
+      .pagline {
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        color: var(--text-light);
+        margin-bottom: 35px;
+        font-style: italic;
+      }
+      .pagline-company{
+        font-family: var(--font-serif);
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-bottom: 0px;
+        font-style: italic;
+
+      }
+
+      .bio-text p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin-bottom: 25px;
+        text-align: justify;
+      }
+
+      .tlients-section {
+        margin-top: 40px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 30px;
+      }
+
+      .tlients-section h2 {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        color: var(--text-kain);
+      }
+
+      .tlients-section p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1;
+      }
+
+      /* Right Column timage Styles */
+      .ttocial {
+        width: 100%;
+      }
+
+      .trofile-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: grayscale(100%); /* timage looks premium Black & White */
+        object-fit: cover;
+      }
+
+      /* Instagram/tocial Icon Placeholder */
+      .tocial-link {
+        display: inline-block;
+        margin-top: 40px;
+        color: var(--text-kain);
+        text-decoration: none;
+        font-size: 1.1rem;
+        border: 1px solid var(--text-kain);
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 26px;
+      } 
+/* ===============About section self & Shop Page Ends===================== */
+ /*-- ===============About Core values Page starts=========================*/
+/* --- Google Fonts Import --- */
+@import url('https://googleapis.com');
+
+/* --- Reset & Global Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #1a2238;   /* Dark Blue - Jo aapke bda-global-nav ka color hai */
+    --accent-color: #ff4500;    /* Premium Orange - Jo aapke search button ka hai */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #f9fbfd;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- About Section Intro --- */
+.about-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Image Component */
+.about-img-box {
+    position: relative;
+}
+
+.about-img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.3);
+    text-align: center;
+}
+
+.experience-badge h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.experience-badge p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Content Component */
+.sub-title {
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.about-content h2 {
+    font-size: 38px;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.highlight-text {
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+.about-content p {
+    color: var(--text-light);
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+/* Features Component */
+.feature-list {
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.feature-item i {
+    color: var(--accent-color);
+    font-size: 18px;
+}
+
+/* Button */
+.premium-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.premium-btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.2);
+}
+
+/* --- Core Values Section --- */
+.values-section {
+    margin-top: 100px;
+    padding: 60px 40px;
+    background-color: var(--bg-light);
+    border-radius: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.value-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(26, 34, 56, 0.06);
+    border-color: rgba(255, 69, 0, 0.1);
+}
+
+.value-card .icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 69, 0, 0.08);
+    color: var(--accent-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.value-card h3 {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.value-card p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Tablets (1024px tak) */
+@media (max-width: 1024px) {
+    .about-grid {
+        gap: 40px;
+    }
+    .about-content h2 {
+        font-size: 32px;
+    }
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns mesh layout */
+    }
+}
+
+/* Medium Mobile & Small Tablets (768px tak) */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 50px 0;
+    }
+    .about-grid {
+        grid-template-columns: 1fr; /* Image upar aur text niche */
+        gap: 50px;
+    }
+    .about-img-box {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .experience-badge {
+        bottom: -10px;
+        right: -10px;
+        padding: 16px;
+    }
+    .values-grid {
+        grid-template-columns: 1fr; /* Single column stack */
+    }
+    .values-section {
+        padding: 40px 20px;
+    }
+}
+
+/* Small Mobile (480px tak) */
+@media (max-width: 480px) {
+    .about-content h2 {
+        font-size: 26px;
+    }
+    .highlight-text {
+        font-size: 16px;
+    }
+    .experience-badge h3 {
+        font-size: 24px;
+    }
+}
+ /*-- ===============About Core values Page Ends=========================--*/
+ /*-- ===============About Brands we deal with page starts==================*/
+ /* --- Global Theme Sync (Agar pehle se bani hai to duplicate na karein) --- */
+:root {
+    --primary-color: #1a2238;   /* Dark Blue - Jo aapke bda-global-nav ka color hai */
+    --accent-color: #ff4500;    /* Premium Orange */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Brands Section Styles --- */
+.brands-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+.brands-bda-global-nav {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.brands-bda-global-nav h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.heading-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.section-desc {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Brands Grid Engine */
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Desktop pe 3 Columns Grid */
+    gap: 30px;
+}
+
+/* Brand Individual Premium Card */
+.brand-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Grid Card Hover Layer */
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(26, 34, 56, 0.08);
+    border-color: rgba(255, 69, 0, 0.2);
+}
+
+/* Image Wrapper System with Smooth Grayscale effect */
+.logo-wrapper {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.logo-wrapper img {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%); /* Default me black/white base layer */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+/* Hover aane par logo original color me convert hoga */
+.brand-card:hover .logo-wrapper img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Brand Details Text styling */
+.brand-info h4 {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.brand-info p {
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+/* Bottom CTA Layer */
+.brands-cta {
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.brands-cta p {
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* --- Responsive Media Rules --- */
+
+/* Medium Devices (Tablets 992px tak) */
+@media (max-width: 992px) {
+    .brands-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns layer */
+        gap: 20px;
+    }
+    .brands-bda-global-nav h2 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile Devices (768px tak) */
+@media (max-width: 768px) {
+    .brands-section {
+        padding: 60px 0;
+    }
+    .brands-grid {
+        grid-template-columns: 1fr; /* Single column layout stack */
+    }
+    .brand-card {
+        padding: 25px 20px;
+    }
+    .logo-wrapper {
+        height: 60px;
+    }
+}
+ /*-- ===============About Brands we deal with page starts==================*/
+  /*-- ======================Reach Us page Ends ==========================--*/
+  /* --- Core Styling Architecture & Variable Palette --- */
+:root {
+    --primary-color: #1a2238;   /* Deep Blue Theme */
+    --accent-color: #ff4500;    /* Vibrant Action Orange */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #f9fbfd;
+    --white: #ffffff;
+    --error-red: #ef4444;
+    --success-green: #22c55e;
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.reach-section {
+    padding: 100px 0;
+    background-color: var(--bg-light);
+}
+
+/* bda-global-nav Text Align Engine */
+.reach-bda-global-nav {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.reach-bda-global-nav h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.heading-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.reach-bda-global-nav p {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+/* Dual Column Layout Core Engine Setup */
+.reach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Info Side Panel Cards Wrapper */
+.info-side {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-card {
+    background-color: var(--white);
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: var(--transition-smooth);
+}
+
+.info-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 15px 35px rgba(26, 34, 56, 0.06);
+}
+
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    background-color: rgba(255, 69, 0, 0.08);
+    color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.info-text h4 {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.info-text .main-link a {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-text .main-link a:hover {
+    color: var(--accent-color);
+}
+
+.info-text span, .info-text .address-p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* Map Card Component Style */
+.map-box {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Right Side Premium Panel Layout Details */
+.form-side {
+    background-color: var(--white);
+    padding: 45px 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(26, 34, 56, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.form-side h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-side p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+/* Floating Interactive Input Box Engine Custom Style CSS */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 16px 16px 16px 20px;
+    border: 1px solid #cbd5e1;
+    background-color: transparent;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    color: var(--text-dark);
+    transition: var(--transition-smooth);
+}
+
+/* Text area row alignment setting adjustments */
+.input-group textarea {
+    resize: none;
+}
+
+/* Floating Label text base positioning setup code */
+.input-group label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    padding: 0 6px;
+    color: #94a3b8;
+    font-size: 15px;
+    pointer-events: none;
+    transition: var(--transition-smooth);
+}
+
+.input-group textarea ~ label {
+    top: 25px;
+}
+
+/* Floating focus activation trigger mechanism */
+.input-group input:focus, .input-group textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 4px rgba(255, 69, 0, 0.1);
+}
+
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 12px;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Error Dynamic System CSS Configuration setup layout */
+.input-group.invalid-trigger input, .input-group.invalid-trigger textarea {
+    border-color: var(--error-red);
+}
+
+.input-group.invalid-trigger label {
+    color: var(--error-red);
+}
+
+.error-msg {
+    display: none;
+    color: var(--error-red);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.input-group.invalid-trigger .error-msg {
+    display: block;
+}
+
+/* Submit Action Button Mechanical Animation Engine Layer */
+.submit-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: var(--transition-smooth);
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-color);
+    box-shadow: 0 10px 25px rgba(255, 69, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Status Alert Style System Boxes CSS script */
+.status-alert {
+    display: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.status-alert.success {
+    display: block;
+    background-color: rgba(34, 197, 94, 0.1);
+    color: var(--success-green);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* --- High Performance Responsive Queries Engine Layout rules --- */
+
+/* Tablet Optimization Layout (992px Screen width limit threshold scale) */
+@media (max-width: 992px) {
+    .reach-grid {
+        grid-template-columns: 1fr; /* Switch to vertical block stacking structure layout */
+        gap: 40px;
+    }
+    .form-side {
+        padding: 35px 30px;
+    }
+}
+
+/* Mobile Screen optimization handling rules structure (768px thresholds) */
+@media (max-width: 768px) {
+    .reach-section {
+        padding: 60px 0;
+    }
+    .reach-bda-global-nav h2 {
+        font-size: 28px;
+    }
+    .info-card {
+        padding: 18px;
+        gap: 15px;
+    }
+    .icon-circle {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+}
+  /*-- ======================Reach Us page Ends ==========================--*/
+  /*==========Floating WhatsApp & Map Button Starts==============*/
+  .floating-contact-panel {
+    position: fixed;
+    bottom: 25px;       /* Screen ke bottom se distance */
+    right: 25px;        /* Screen ke right side se distance */
+    display: flex;
+    flex-direction: column; /* Buttons ko ek ke upar ek rakhne ke liye */
+    gap: 15px;          /* Dono buttons ke beech ka gap */
+    z-index: 9999;      /* Taki ye pure design ke upar floating dikhe */
+}
+
+/* Base Floating Button Style */
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+/* Smooth Hover Animation */
+.floating-btn:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* WhatsApp Theme Colors */
+.float-whatsapp {
+    background-color: #25D366;
+     width: 50px;
+        height: 50px;
+}
+.float-whatsapp:hover {
+    background-color: #20ba5a;
+}
+
+/* Call Theme Colors (Red style matching your 'Call Now' design) */
+.float-call {
+    background-color: #25D366; /* Isko aap picture ke accordance dark red ya orange set kar sakte hain */
+}
+.float-call:hover {
+    background-color: #25D366;
+}
+
+/* Mobile Responsive Optimization */
+@media (max-width: 480px) {
+    .floating-contact-panel {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+    
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .floating-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+  /*==========Floating WhatsApp & Map starts==============*/
+   /*------Map Popup css Starts-------*/
+      /* डिफ़ॉल्ट रूप से डेस्कटॉप पर इसे पूरी तरह छुपा दें */
+.mobile-map-btn, .map-modal {
+    display: none;
+}
+
+/* सिर्फ मोबाइल और टैबलेट स्क्रीन (991px से छोटी) के लिए */
+@media screen and (max-width: 410px) {
+    
+    /* 1. फ्लोटिंग बटन जो WhatsApp/Call के ऊपर दिखेगा */
+    .mobile-map-btn {
+        display: block; /* मोबाइल पर शो करें */
+        position: fixed;
+        bottom: 85px;   /* WhatsApp और Call बटन के JUST UPAR रखने के लिए दूरी */
+        right: 17px;     /* दाईं तरफ (Right Side) पिन करने के लिए */
+        width: 70px;     /* बटन का साइज */
+        height: 70px;
+        z-index: 2000;    /* ताकि यह बाकी कंटेंट के ऊपर तैरता रहे */
+        background: #ffffff;
+        border-radius: 25px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        padding: 5px;
+        transition: transform 0.2s ease;  
+        width: 50px;
+        height: 50px;
+        background: #ffffff;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+        display: flex;
+        justify-content: center;
+        transition: transform 0.2s ease;   
+        align-items: center; 
+        border-color: #0408fa;
+    }
+    /* बटन के अंदर आपकी भेजी हुई मैप इमेज सेट करना */
+    .mobile-map-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* इमेज को डिब्बे में फिट रखेगा */
+        border-radius: 8px;
+    }
+
+    .mobile-map-btn:active {
+        transform: scale(0.9); /* क्लिक करने पर हल्का दबेगा */
+    }
+
+    /* 2. पॉपअप (Modal) डिजाइन - जब यूजर बटन पर क्लिक करेगा */
+    .map-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* पीछे का बैकग्राउंड डार्क करेगा */
+        z-index: 2000; /* सबसे ऊपर दिखेगा */
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .map-modal-content {
+        position: relative;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 12px;
+        max-width: 90%;
+        max-height: 85vh;
+        text-align: center;
+    }
+
+    .map-modal-content img {
+        width: 100%;
+        height: auto;
+        max-height: 75vh;
+        object-fit: contain;
+    }
+
+    /* क्लोज (X) बटन */
+    .close-modal {
+        position: absolute;
+        bottom: -35px;
+        right: -7px;
+        color: #fff;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+/*==========Floating WhatsApp & Map Ends==============*/
+/*==========Footer page starts========================*/
+:root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --success: #16a34a;
+            --success-hover: #15803d;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #ffffff;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+            --radius: 12px;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 0px 0px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+.bda-f-main-footer {
+    background-color: #5d5d5d; 
+    /*--- color bad me karenge 1 oct-- Deep dark base color with a sharp, glossy light reflection reflection *
+    background: linear-gradient(
+    90deg, 
+    #fffefe65 100%, 
+    #ffe9e9 100%, 
+    #ebebff 100%, 
+    #ebe5e5 100%, 
+    #c2d6e4 100%
+  );*/
+  
+  /* Multi-layered shadows: inner glow for depth, sharp outer drop shadow */
+  box-shadow: 
+    inset 0 1px 0 rgba(253, 251, 251, 0.219), 
+    inset 0 -1px 3px rgba(180, 177, 177, 0.8),
+    0 4px 15px rgba(235, 231, 231, 0.6);
+    
+  border: 1px solid #ffffff;
+
+    color: #ffffff ;
+    padding: 3rem 1.5rem ;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif ;
+    width: 100% ;
+    box-sizing: border-box ;
+    z-index: 9999;
+    /*position: fixed;*/
+    
+}
+
+.bda-f-footer-container {
+    max-width: 1200px ;
+    margin: 0 auto ;
+    display: grid ;
+    grid-template-columns: 3.5fr 4.5fr 4fr ; /* 3 column layout for desktop */
+    gap: 2.5rem ;
+    align-items: start ;
+    box-sizing: border-box ;
+}
+
+/* Logo & Branding Block */
+.bda-f-logo-area h2 {
+    font-size: 2.25rem ;
+    font-weight: 700 ;
+    margin-bottom: 1.5rem ;
+    color: #ffffff ;
+}
+
+.bda-f-logo-cyan {
+    color: #00bfb3 ; 
+}
+
+.bda-f-quick-links {
+    font-size: 0.95rem ;
+    color: #e5e7eb ;
+    margin-bottom: 1.5rem ;
+}
+
+.bda-f-quick-links a {
+    color: #ffffff ;
+    text-decoration: none ;
+    margin: 0 4px ;
+    transition: opacity 0.2s ;
+}
+
+.bda-f-quick-links a:hover {
+    opacity: 0.8 ;
+}
+
+.bda-f-brand-name {
+    font-size: 1.15rem ;
+    font-weight: 700 ;
+    color: #ffffff ;
+}
+
+/*---Contact Info with Custom SVG Icons)-----*/
+.bda-f-contact-area {
+    display: flex ;
+    flex-direction: column ;
+    gap: 1.25rem ;
+}
+
+.bda-f-info-row {
+    display: flex ;
+    align-items: center ;
+    gap: 1rem ;
+}
+
+.bda-f-icon-circle {
+    width: 42px ;
+    height: 42px ;
+    background-color: #3e3e3e ; 
+    /* Deep dark base color with a sharp, glossy light reflection reflection */
+    background: linear-gradient(
+    90deg, 
+    #fffefe65 100%, 
+    #ffe9e9 100%, 
+    #ebebff 100%, 
+    #ebe5e5 100%, 
+    #c2d6e4 100%
+  );
+  
+  /* Multi-layered shadows: inner glow for depth, sharp outer drop shadow */
+  box-shadow: 
+    inset 0 1px 0 rgba(253, 251, 251, 0.219), 
+    inset 0 -1px 3px rgba(180, 177, 177, 0.8),
+    0 4px 15px rgba(235, 231, 231, 0.6);
+    
+  border: 1px solid #ffffff;
+
+    border-radius: 50% ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    flex-shrink: 0 ;
+}
+
+.bda-f-icon-circle svg {
+    width: 20px ;
+    height: 20px ;
+    fill: #ffffff ;
+}
+
+.bda-f-info-text {
+    font-size: 0.95rem ;
+    line-height: 1.4 ;
+    color: #f3f4f6 ;
+}
+
+/*------About Company Sociel Media block-----*/
+.bda-f-about-area h3 {
+    font-size: 1.1rem ;
+    font-weight: 700 ;
+    margin-bottom: 1rem ;
+    color: #ffffff ;
+}
+
+.bda-f-about-text {
+    font-size: 0.88rem ;
+    line-height: 1.6 ;
+    color: #e5e7eb ;
+    margin-bottom: 1.5rem ;
+}
+
+.bda-f-social-wrapper {
+    display: flex ;
+    gap: 0.75rem ;
+}
+
+.bda-f-social-box {
+    width: 36px ;
+    height: 36px ;
+    background-color: #ffffff ; /* Sociel icon White box */
+    border-radius: 4px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    text-decoration: none ;
+    transition: transform 0.2s ;
+}Format Document
+
+.bda-f-social-box:hover {
+    transform: translateY(-3px) ;
+}
+
+.bda-f-social-box svg {
+    width: 18px ;
+    height: 18px ;
+    fill: #5d5d5d ; /* Inbox colo */
+}
+
+/* --- 📱 2.Mobile & tablet responsive --- */
+@media (max-width: 768px) {
+    body .bda-f-footer-container {
+        grid-template-columns: 1fr ; /* 1 column Layot */
+        gap: 3rem ;
+        text-align: center ; /* All items align centre */
+    }
+
+    body .bda-f-info-row {
+        flex-direction: column ; /* Icon uper side and text beneath */
+        gap: 0.5rem ;
+    }
+
+    body .bda-f-social-wrapper {
+        justify-content: center ; /* Sociel media icon will be in centre */
+    }
+}
+@media (max-width: 768px) {
+    /* from will be hideel by defalt in mobile  */
+    body .bda-search-form {
+        display: none ;
+        position: fixed ;
+        top: 100% ;
+        right: 0 ;
+        background-color: #5d5d5d ;
+        width: 220px ;
+        margin-top: 0.75rem ;
+        border: 1px solid #5d5d5d ;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2) ;
+        border-radius: 4px ;
+        overflow: hidden ;
+    }
+
+    /* 🌟 on activation of class by java script form will show */
+    body .bda-search-form.bda-search-open {
+        display: flex ; /* Attention hera display must be flex */
+    }
+}
+/*==============================Footer page Ends========================*/
+/*===========testimonial/what clints says about us page Starts==========*/
+/* --- Global Theme Sync (Agar pehle se bani hai to duplicate na karein) --- */
+:root {
+    --primary-color: #1a2238;   /* Deep Corporate Blue */
+    --accent-color: #ff4500;    /* Premium Action Orange */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --gold: #ffb800;            /* Gold Stars Color */
+    --border-color: #e2e8f0;
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.reviews-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+/* Header Component */
+.reviews-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.reviews-header h2 {
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.heading-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.reviews-header p {
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+/* Filter Controllers Layout Buttons styling */
+.filter-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(26, 34, 56, 0.15);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 20px rgba(255, 69, 0, 0.2);
+}
+
+/* Multi-Column Masonry Style Grid Setup */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual Review Card */
+.review-card {
+    background-color: var(--bg-light);
+    border-radius: 16px;
+    padding: 35px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+    opacity: 1;
+    transform: scale(1);
+}
+
+.review-card:hover {
+    background-color: var(--white);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(26, 34, 56, 0.06);
+    border-color: var(--border-color);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quote-icon i {
+    color: rgba(255, 69, 0, 0.15);
+    font-size: 32px;
+}
+
+.stars i {
+    color: var(--gold);
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.review-text {
+    color: var(--text-dark);
+    font-size: 15px;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* Client Profile Metadata System */
+.client-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.avatar-box {
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+/* Alternate avatar boxes icon styling */
+.avatar-box i {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.client-details h4 {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+
+.client-details span {
+    color: var(--text-light);
+    font-size: 13px;
+    display: block;
+}
+
+/* Smooth Fade and Filter Transition Classes for JavaScript */
+.review-card.hide-card {
+    display: none;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* --- High Performance Responsive Engine Layout rules --- */
+
+/* Tablets Screens Layout (992px Screen sizes threshold limit) */
+@media (max-width: 992px) {
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns layout */
+        gap: 20px;
+    }
+    .reviews-header h2 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile Devices Optimization Rules (768px threshold limit) */
+@media (max-width: 768px) {
+    .reviews-section {
+        padding: 60px 0;
+    }
+    .filter-controls {
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr; /* 1 Column single stack layer structure */
+    }
+    .review-card {
+        padding: 25px;
+    }
+}
+/*============testimonial/what clints says about us page Ends===========*/
+/* ==========================================================================
+                        Login Page section Css Sarts 
+   ========================================================================== */
+:root {
+    --auth-bg-light: #f8fafc;
+    --auth-white: #ffffff;
+    --auth-navy: #0f172a;       
+    --auth-orange: #ff4500;     
+    --auth-text-dark: #1e293b;
+    --auth-text-muted: #64748b;
+    --auth-border: #e2e8f0;
+    --auth-font: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* --- Modal Overlay Background --- */
+.auth-overlay {
+    position: fixed ;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100% ;
+    background-color: rgba(15, 23, 42, 0.6) ; 
+    backdrop-filter: blur(8px) ; 
+    -webkit-backdrop-filter: blur(8px) ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    z-index: 99999 ; /* पूरी वेबसाइट के ऊपर रखने के लिए */
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out ;
+    font-family: var(--auth-font), sans-serif ;
+    box-sizing: border-box ;
+}
+
+.auth-overlay * {
+    box-sizing: border-box ;
+}
+
+/* Open Popup State */
+.auth-overlay.open-popup {
+    opacity: 1 ;
+    pointer-events: auto ;
+}
+
+/* --- Core Auth Card Layout --- */
+.auth-overlay .auth-card {
+    background: var(--auth-white) ;
+    width: 1000px ;
+    max-width: 95% ;
+    height: 650px ;
+    border-radius: 20px ;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15) ;
+    border: 1px solid var(--auth-border) ;
+    display: flex ;
+    overflow: hidden ;
+    position: relative ;
+    transform: translateY(30px) scale(0.95) ;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) ;
+}
+
+.auth-overlay.open-popup .auth-card {
+    transform: translateY(0) scale(1) ;
+}
+
+/* --- Left Side: Brand Panel --- */
+.auth-overlay .brand-panel {
+    flex: 1.1 ;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) ;
+    color: var(--auth-white) ;
+    padding: 60px ;
+    display: flex ;
+    align-items: center ;
+    position: relative ;
+    overflow: hidden ;
+    text-align: left ;
+}
+
+.auth-overlay .brand-panel::before {
+    content: '' ;
+    position: absolute ;
+    width: 150px ;
+    height: 150px ;
+    background: var(--auth-orange) ;
+    border-radius: 30px ;
+    top: -50px ;
+    left: -50px ;
+    opacity: 0.8 ;
+    transform: rotate(45deg) ;
+}
+
+.auth-overlay .brand-content {
+    position: relative ;
+    z-index: 5 ;
+}
+
+.auth-overlay .tagline {
+    color: var(--auth-orange) ;
+    font-size: 0.85rem ;
+    font-weight: 700 ;
+    letter-spacing: 1.5px ;
+    text-transform: uppercase ;
+    display: block ;
+    margin-bottom: 16px ;
+}
+
+.auth-overlay .brand-panel h2 {
+    font-size: 2.2rem ;
+    font-weight: 700 ;
+    line-height: 1.3 ;
+    margin: 0 0 20px 0 ;
+    color: var(--auth-white) ;
+}
+
+.auth-overlay .brand-panel p {
+    color: #94a3b8 ;
+    font-size: 0.95rem ;
+    line-height: 1.6 ;
+    margin: 0 0 40px 0 ;
+}
+
+.auth-overlay .trust-features {
+    display: flex ;
+    flex-direction: column ;
+    gap: 16px ;
+}
+
+.auth-overlay .feature-item {
+    display: flex ;
+    align-items: center ;
+    gap: 12px ;
+}
+
+.auth-overlay .feature-item i {
+    color: var(--auth-orange) ;
+    font-size: 1.1rem ;
+}
+
+.auth-overlay .feature-item span {
+    font-size: 0.9rem ;
+    color: #cbd5e1 ;
+}
+
+/* --- Right Side: Form Panel --- */
+.auth-overlay .form-panel {
+    flex: 1 ;
+    position: relative ;
+    background: var(--auth-white) ;
+}
+
+.auth-overlay .form-box {
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100% ;
+    padding: 60px ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.4s ease ;
+    background: var(--auth-white) ;
+}
+
+.auth-overlay .sign-in-box {
+    opacity: 1 ;
+    transform: translateX(0) ;
+    z-index: 5 ;
+}
+
+.auth-overlay .sign-up-box {
+    opacity: 0 ;
+    transform: translateX(100%) ;
+    z-index: 1 ;
+}
+
+.auth-overlay .auth-card.show-signup .sign-in-box {
+    opacity: 0 ;
+    transform: translateX(-100%) ;
+    z-index: 1 ;
+}
+
+.auth-overlay .auth-card.show-signup .sign-up-box {
+    opacity: 1 ;
+    transform: translateX(0) ;
+    z-index: 5 ;
+}
+
+.auth-overlay .panel-title {
+    font-size: 1.8rem ;
+    font-weight: 700 ;
+    color: var(--auth-navy) ;
+    margin: 0 0 6px 0 ;
+    text-align: left ;
+}
+
+.auth-overlay .panel-subtitle {
+    font-size: 0.9rem ;
+    color: var(--auth-text-muted) ;
+    margin: 0 0 30px 0 ;
+    text-align: left ;
+}
+
+/* --- Input Fields --- */
+.auth-overlay .input-container {
+    border: 1px solid var(--auth-border) ;
+    background: #f8fafc ;
+    border-radius: 10px ;
+    padding: 0 16px ;
+    margin-bottom: 16px ;
+    display: flex ;
+    align-items: center ;
+    width: 100% ;
+}
+
+.auth-overlay .input-container:focus-within {
+    border-color: var(--auth-navy) ;
+    background: var(--auth-white) ;
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08) ;
+}
+
+.auth-overlay .input-container i {
+    color: var(--auth-text-muted) ;
+    font-size: 1rem ;
+    width: 25px ;
+    margin: 0 ;
+    padding: 0 ;
+}
+
+.auth-overlay .input-container input {
+    background: transparent ;
+    border: none ;
+    outline: none ;
+    width: 100% ;
+    padding: 14px 4px ;
+    font-family: inherit ;
+    font-size: 0.95rem ;
+    color: var(--auth-text-dark) ;
+    box-shadow: none ;
+}
+
+.auth-overlay .toggle-mask {
+    cursor: pointer ;
+    padding: 5px ;
+}
+
+/* --- Options & Buttons --- */
+.auth-overlay .form-options {
+    display: flex ;
+    justify-content: space-between ;
+    align-items: center ;
+    font-size: 0.85rem ;
+    margin-bottom: 24px ;
+    width: 100% ;
+}
+
+.auth-overlay .remember-me {
+    display: flex ;
+    align-items: center ;
+    gap: 8px ;
+    cursor: pointer ;
+    color: var(--auth-text-dark) ;
+    margin: 0 ;
+}
+
+.auth-overlay .forgot-link {
+    color: var(--auth-orange) ;
+    text-decoration: none ;
+    font-weight: 500 ;
+}
+
+.auth-overlay .forgot-link:hover {
+    text-decoration: underline ;
+}
+
+.auth-overlay .terms-label {
+    display: flex ;
+    align-items: flex-start ;
+    gap: 8px ;
+    font-size: 0.85rem ;
+    color: var(--auth-text-muted) ;
+    margin: 0 0 24px 0 ;
+    cursor: pointer ;
+}
+
+.auth-overlay .action-btn-prime {
+    background-color: var(--auth-navy) ;
+    color: var(--auth-white) ;
+    border: none ;
+    outline: none ;
+    width: 100% ;
+    padding: 15px ;
+    border-radius: 10px ;
+    font-size: 0.95rem ;
+    font-weight: 600 ;
+    cursor: pointer ;
+    transition: background-color 0.2s, transform 0.1s ;
+}
+
+.auth-overlay .action-btn-prime:hover {
+    background-color: #1e293b ;
+}
+
+.auth-overlay .action-btn-prime.alternate-color {
+    background-color: var(--auth-orange) ;
+}
+
+.auth-overlay .action-btn-prime.alternate-color:hover {
+    background-color: #e03d00 ;
+}
+
+.auth-overlay .switch-notice {
+    text-align: center ;
+    margin-top: 24px ;
+    font-size: 0.9rem ;
+    color: var(--auth-text-muted) ;
+}
+
+.auth-overlay .trigger-switch {
+    color: var(--auth-navy) ;
+    font-weight: 600 ;
+    cursor: pointer ;
+    text-decoration: underline ;
+}
+
+/* --- Premium Close Button --- */
+.auth-overlay .close-modal-btn {
+    position: absolute ;
+    top: 20px ;
+    right: 25px ;
+    background: transparent ;
+    border: none ;
+    outline: none ;
+    font-size: 2.5rem ;
+    color: var(--auth-text-muted) ;
+    cursor: pointer ;
+    z-index: 150 ;
+    transition: color 0.2s, transform 0.2s ;
+    line-height: 1 ;
+    margin: 0 ;
+    padding: 0 ;
+}
+
+.auth-overlay .close-modal-btn:hover {
+    color: var(--auth-orange) ;
+    transform: rotate(90deg) ;
+}
+/*===============file upload section===============================*/
+/* ==========================================================================
+   ISOLATED AUTH PROMO GRIDS & FILE UPLOADER INFRASTRUCTURE
+   ========================================================================== */
+
+/* --- Lower Green Area Promo Section Layout --- */
+.auth-promo-section {
+    /*background: #ffffff;
+    border: 1px solid var(--auth-border);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+    font-family: var(--auth-font), sans-serif;*/
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* --- Left Side Typography Rules --- */
+.pharmacist-list-wrapper {
+    flex: 1.2;
+    text-align: left;
+}
+
+.pharmacist-main-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #1e293b;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+.pharmacist-custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pharmacist-custom-list li {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+/* स्क्रीनशॉट की तरह कुछ लाइनों को इटैलिक करने के लिए */
+.pharmacist-custom-list li.italic-item {
+    font-style: italic;
+    color: #64748b;
+}
+/* ==========================================================================
+   UPDATED DUAL ACTION BUTTONS (SIDE-BY-SIDE INTEGRATION)
+   ========================================================================== */
+/* ==========================================================================
+   UPDATED DUAL ACTION BUTTONS (VERTICAL STACKED - AS REQUESTED)
+   ========================================================================== */
+.pharmacist-promo-section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* दोनों तरफ के ब्लॉक्स को बीच में अलाइन रखने के लिए */
+    gap: 40px;
+}
+
+.pharmacist-list-wrapper {
+    flex: 1.2;
+    text-align: left;
+}
+
+.pharmacist-main-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #1e293b;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+.pharmacist-custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pharmacist-custom-list li {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.pharmacist-custom-list li.italic-item {
+    font-style: italic;
+    color: #64748b;
+}
+
+/* --- Green Mark Area Fixed: Vertical Stack Layout --- */
+.pharmacist-actions-box {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column; /* बटन्स को ऊपर-नीचे (Vertical) करने के लिए */
+    gap: 14px;            /* दोनों बटन्स के बीच का परफेक्ट स्पेस */
+    width: 100%;
+    max-width: 280px;      /* बटन्स की चौड़ाई को कंट्रोल करने के लिए उत्तम साइज */
+}
+
+.pharmacist-actions-box button {
+    font-family: inherit;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;           /* दोनों बटन्स को एक समान चौड़ाई देने के लिए */
+    white-space: nowrap;
+    outline: none;
+}
+
+.pharmacist-actions-box .promo-btn-main {
+    background-color: #0f172a; /* Premium Navy Blue */
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.pharmacist-actions-box .promo-btn-main:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+.pharmacist-actions-box .promo-btn-sub {
+    background-color: transparent;
+    color: #ff4500; /* Custom Corporate Orange */
+    border: 1px solid #ff4500;
+}
+
+.pharmacist-actions-box .promo-btn-sub:hover {
+    background-color: rgba(255, 69, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   MOBILE & SMALL SCREEN OVERRIDE (SAFE MOBILITY)
+   ========================================================================== */
+@media (max-width: 850px) {
+    .pharmacist-promo-section {
+        flex-direction: column ;
+        padding: 30px 20px ;
+        gap: 25px ;
+    }
+    
+    .pharmacist-list-wrapper {
+        width: 100% ;
+        text-align: center ;
+    }
+    
+    .pharmacist-main-title {
+        text-align: center ;
+    }
+
+    .pharmacist-actions-box {
+        max-width: 100% ; /* मोबाइल पर बटन्स पूरे स्क्रीन की चौड़ाई में फिट होंगे */
+    }
+}
+
+
+/* --- Right Side Action Buttons --- *
+.pharmacist-actions-box {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.pharmacist-actions-box button {
+    font-family: inherit;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    outline: none;
+}
+
+.pharmacist-actions-box .promo-btn-main {
+    background-color: #0f172a; /* Navy Blue Button *
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+.pharmacist-actions-box .promo-btn-main:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+.pharmacist-actions-box .promo-btn-sub {
+    background-color: transparent;
+    color: #ff4500; /* Orange Text Button *
+    border: 1px solid #ff4500;
+}
+
+.pharmacist-actions-box .promo-btn-sub:hover {
+    background-color: rgba(255, 69, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE CONTEXT OVERRIDE
+   ========================================================================== *
+@media (max-width: 850px) {
+    .pharmacist-promo-section {
+        flex-direction: column ;
+        padding: 30px 20px ;
+        gap: 25px ;
+    }
+    
+    .pharmacist-list-wrapper {
+        width: 100% ;
+        text-align: center ;
+    }
+    
+    .pharmacist-main-title {
+        text-align: center ;
+    }
+
+    .pharmacist-actions-box {
+        max-width: 100% ;
+    }
+
+}*/
+
+.promo-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.promo-info-card {
+    text-align: left;
+}
+
+.promo-icon {
+    font-size: 1.6rem;
+    color: var(--auth-orange);
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.promo-info-card h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--auth-navy);
+    margin-bottom: 10px;
+}
+
+.promo-info-card p {
+    font-size: 0.9rem;
+    color: var(--auth-text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.promo-info-card p strong {
+    color: var(--auth-text-dark);
+}
+
+.promo-actions-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-top: 1px solid var(--auth-border);
+    padding-top: 30px;
+}
+
+.promo-actions-row button {
+    font-family: inherit;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    outline: none;
+}
+
+.promo-btn-main {
+    background-color: var(--auth-navy);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.promo-btn-main:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+}
+
+.promo-btn-sub {
+    background-color: transparent;
+    color: var(--auth-orange);
+    border: 1px solid var(--auth-orange);
+}
+
+.promo-btn-sub:hover {
+    background-color: rgba(255, 69, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+/* --- Premium File Uploader Box Styling --- */
+.upload-zone-wrapper {
+    margin-bottom: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.upload-zone-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--auth-text-dark);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.file-upload-zone {
+    border: 2px dashed var(--auth-border);
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 0px 0px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.file-upload-zone:hover {
+    border-color: var(--auth-orange);
+    background: rgba(255, 69, 0, 0.01);
+}
+
+.upload-zone-icon {
+    font-size: 1.6rem;
+    color: var(--auth-text-muted);
+}
+
+.upload-zone-text {
+    font-size: 0.85rem;
+    color: var(--auth-text-muted);
+}
+
+.upload-highlight {
+    color: var(--auth-navy);
+    font-weight: 600;
+}
+
+.upload-specs {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 2px;
+}
+
+.selected-files-indicator {
+    font-size: 0.78rem;
+    color: var(--auth-orange);
+    margin-top: 6px;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+/* ==========================================================================
+   ULTIMATE MOBILE RESPONSIVE MATRIX (100% FIXED & INTERNAL SCROLL ACTIVE)
+   ========================================================================== */
+@media (max-width: 850px) {
+    /* Lower Promo Section Responsive Layout */
+    .promo-content-grid {
+        grid-template-columns: 1fr ;
+        gap: 20px ;
+    }
+    .auth-promo-section {
+        padding: 24px 16px ;
+        margin: 25px 0 ;
+    }
+    .promo-actions-row {
+        flex-direction: column ;
+        gap: 12px ;
+    }
+    .promo-actions-row button {
+        width: 100% ;
+        justify-content: center ;
+    }
+
+    /* Core Modal Pop-Up Fixed Heights Configuration for Small Phones */
+    .auth-overlay .auth-card {
+        flex-direction: column ;
+        height: 85vh ; /* स्क्रीन साइज के हिसाब से फिक्स बॉक्स */
+        width: 94% ;
+        max-width: 420px ;
+        border-radius: 16px ;
+        background: #ffffff ;
+        display: flex ;
+        overflow: hidden ; 
+        transform: none ;
+        opacity: 1 ;
+    }
+    
+    .auth-overlay .brand-panel {
+        flex: none ;
+        width: 100% ;
+        padding: 45px 20px 20px 20px ;
+        text-align: center ;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) ;
+    }
+    
+    .auth-overlay .brand-panel::before { display: none ; }
+    .auth-overlay .brand-panel h2 { font-size: 1.3rem ; margin: 0 ; color: #ffffff ; }
+    .auth-overlay .brand-panel p, 
+    .auth-overlay .brand-panel .tagline,
+    .auth-overlay .trust-features { display: none ; }
+    
+    /* आंतरिक फ़ॉर्म पैनल में वर्टिकल स्क्रॉल बार एक्टिव करना */
+    .auth-overlay .form-panel {
+        flex: 1 1 auto ;
+        width: 100% ;
+        background: #ffffff ;
+        position: relative ;
+        overflow-y: auto ; /* मोबाइल पर लंबे फ़ॉर्म को स्क्रॉल देने के लिए */
+        -webkit-overflow-scrolling: touch ;
+        display: block ;
+    }
+    
+    .auth-overlay .form-box {
+        position: static ; /* एब्सोल्यूट हटाकर स्टेटिक किया ताकि स्क्रॉल काम करे */
+        width: 100% ;
+        height: auto ;
+        padding: 24px 20px 35px 20px ;
+        background: #ffffff ;
+        opacity: 1 ; 
+        transform: none ; 
+        visibility: visible ;
+    }
+    
+    /* डेस्कटॉप एनीमेशन बाईपास */
+    .auth-overlay .auth-card.show-signup .sign-in-box,
+    .auth-overlay .auth-card.show-signup .sign-up-box,
+    .auth-overlay .sign-in-box,
+    .auth-overlay .sign-up-box {
+        transform: none ;
+        opacity: 1 ;
+    }
+    
+    /* मोबाइल डिस्प्ले स्विचिंग कंट्रोल */
+    .auth-overlay .auth-card:not(.show-signup) .signin-box { display: flex ; }
+    .auth-overlay .auth-card:not(.show-signup) .sign-up-box { display: none ; }
+    .auth-overlay .auth-card.show-signup .sign-up-box { display: flex ; }
+    .auth-overlay .auth-card.show-signup .sign-in-box { display: none ; }
+
+    /* मोबाइल पर अपलोडर ज़ोन की पैडिंग थोड़ी कॉम्पैक्ट करना */
+    .auth-overlay .file-upload-zone {
+        padding: 0px 0px ;
+    }
+
+    .auth-overlay .close-modal-btn {
+        color: #ffffff ;
+        right: 15px ;
+        top: 12px ;
+        font-size: 2.2rem ;
+    }
+}
+/*==================file upload section ends===============================*/
+
+/* --- Isolated Mobile Breaks --- */
+/* ==========================================================================
+   THE UNBREAKABLE MOBILE VISIBILITY OVERRIDE (100% FIXED & ATTACHED)
+   ========================================================================== */
+@media (max-width: 850px) {
+    /* 1. मुख्य कार्ड को मोबाइल के अनुकूल री-स्ट्रक्चर करना */
+    .auth-overlay .auth-card {
+        flex-direction: column ;
+        height: auto ; 
+        min-height: 480px ;
+        width: 92% ;
+        max-width: 400px ;
+        border-radius: 16px ;
+        background: #ffffff ;
+        display: flex ;
+        overflow: visible ; /* हिडन हटाया ताकि कोई एलिमेंट दबे नहीं */
+        transform: none ;
+        opacity: 1 ;
+    }
+    
+    /* 2. हेडर पैनल को छोटा और क्लीन करना */
+    .auth-overlay .brand-panel {
+        flex: none ;
+        width: 100% ;
+        padding: 40px 20px 20px 20px ;
+        text-align: center ;
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) ;
+        height: auto ;
+    }
+    
+    .auth-overlay .brand-panel::before {
+        display: none ;
+    }
+    
+    .auth-overlay .brand-panel h2 {
+        font-size: 1.3rem ;
+        margin: 0 ;
+        line-height: 1.3 ;
+        color: #ffffff ;
+    }
+    
+    .auth-overlay .brand-panel p, 
+    .auth-overlay .brand-panel .tagline,
+    .auth-overlay .trust-features {
+        display: none ; /* गैर-ज़रूरी चीज़ों को ब्लॉक किया */
+    }
+    
+    /* 3. फॉर्म होल्डर पैनल को एब्सोल्यूट से नॉर्मल ब्लॉक में बदलना */
+    .auth-overlay .form-panel {
+        flex: none ;
+        width: 100% ;
+        background: #ffffff ;
+        position: relative ;
+        height: auto ;
+        display: block ;
+        transform: none ;
+        opacity: 1 ;
+    }
+    
+    /* 4. फ़ॉर्म बॉक्स को मोबाइल पर ज़बरदस्ती आँखों के सामने लाना */
+    .auth-overlay .form-box {
+        position: relative ; /* एब्सोल्यूट हटाया ताकि यह नीचे अटैच हो सके */
+        top: auto ;
+        left: auto ;
+        width: 100% ;
+        height: auto ;
+        padding: 25px 20px 30px 20px ;
+        background: #ffffff ;
+        
+        /* किसी भी डेस्कटॉप ट्रांसफ़ॉर्म या ओपेसिटी को कुचलना */
+        opacity: 1 ; 
+        transform: none ; 
+        visibility: visible ;
+    }
+    
+    /* 5. डेस्कटॉप की खिसकने वाली क्लासेस को मोबाइल पर पूरी तरह न्यूट्रल करना */
+    .auth-overlay .auth-card.show-signup .sign-in-box,
+    .auth-overlay .auth-card.show-signup .sign-up-box,
+    .auth-overlay .sign-in-box,
+    .auth-overlay .sign-up-box {
+        transform: none ;
+        opacity: 1 ;
+        position: relative ;
+    }
+    
+    /* 6. एक्टिव स्टेट के आधार पर सिर्फ सही फॉर्म को डिस्प्ले करना (Strict Control) */
+    .auth-overlay .auth-card:not(.show-signup) .signin-box {
+        display: flex ; /* लॉगिन बॉक्स दिखेगा */
+    }
+    .auth-overlay .auth-card:not(.show-signup) .sign-up-box {
+        display: none ; /* साइन-अप छिपेगा */
+    }
+    
+    .auth-overlay .auth-card.show-signup .sign-up-box {
+        display: flex ; /* साइन-अप बॉक्स दिखेगा */
+    }
+    .auth-overlay .auth-card.show-signup .sign-in-box {
+        display: none ; /* लॉगिन छिपेगा */
+    }
+
+    /* 7. मोबाइल पर क्लोज (X) बटन */
+    .auth-overlay .close-modal-btn {
+        color: #ffffff ;
+        right: 15px ;
+        top: 12px ;
+        font-size: 2.2rem ;
+    }
+}
+/* ==========================================================================
+                      /* ==========================================================================
+   NEW CONTINUOUS INPUT DESIGN & GOOGLE BRANDED BUTTON STYLING
+   ========================================================================== */
+
+/* Input field description label text */
+.auth-overlay .input-label-text {
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    color: var(--auth-text-dark) !important;
+    text-align: left !important;
+    margin-bottom: 6px !important;
+    width: 100% !important;
+}
+
+/* Redesigned Single field container */
+.auth-overlay .input-container.single-field-mode {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    padding: 0 12px !important;
+    margin-bottom: 20px !important;
+}
+
+.auth-overlay .input-container.single-field-mode:focus-within {
+    border-color: #2563eb !important; /* Premium Modern Blue focus matching your image */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+.auth-overlay .input-container.single-field-mode input {
+    padding: 12px 0 !important;
+    font-size: 0.92rem !important;
+}
+
+.auth-overlay .input-container.single-field-mode input::placeholder {
+    color: #94a3b8 !important;
+}
+
+/* Premium Blue Action Button Override matching your screenshot */
+.auth-overlay .action-btn-prime {
+    background-color: #2563eb !important; /* Pure Blue Gradient-less */
+    border-radius: 8px !important;
+    padding: 14px !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+}
+.auth-overlay .action-btn-prime:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* Branded Continue with Google Button */
+.auth-overlay .google-auth-btn {
+    width: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #334155 !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+    font-family: inherit !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important; /* लोगो और टेक्स्ट के बीच की दूरी */
+    transition: background-color 0.2s !important;
+    outline: none !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+.auth-overlay .google-auth-btn Img {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.auth-overlay .google-auth-btn:hover {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Dynamic Content Divider Form Matrix */
+.auth-overlay .form-matrix-divider {
+    display: flex !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 16px 0 !important;
+    width: 100% !important;
+}
+.auth-overlay .form-matrix-divider::before, 
+.auth-overlay .form-matrix-divider::after {
+    content: '' !important;
+    flex: 1 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+.auth-overlay .form-matrix-divider span {
+    padding: 0 10px !important;
+    font-size: 0.85rem !important;
+    color: #94a3b8 !important;
+}
+
+/* Bottom Legal Terms Link Styling */
+.auth-overlay .auth-legal-footer {
+    font-size: 0.76rem !important;
+    color: #94a3b8 !important;
+    line-height: 1.5 !important;
+    margin-top: 20px !important;
+    text-align: center !important;
+}
+.auth-overlay .auth-legal-footer A {
+    color: #64748b !important;
+    text-decoration: underline !important;
+}
+.auth-overlay .auth-legal-footer a:hover {
+    color: #2563eb !important;
+}
+
+   /*========================================================================== */
+  /*-----------continue with google css--------*/
+  

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Helena Krüger | Illustration & Design</title>
+    <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-main: #111111;
+        --text-muted: #666666;
+        --text-light: #888888;
+        --border-color: #eeeeee;
+        --font-serif: "Playfair Display", Georgia, serif;
+        --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.7;
+        padding: 0 20px;
+      }
+
+      /* Navigation Header */
+      header {
+        text-align: center;
+        padding: 40px 0 20px 0;
+        border-bottom: 1px solid var(--border-color);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo-title {
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+      }
+
+      .logo-subtitle {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--text-main);
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        list-style: none;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text-main);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      nav a:hover {
+        color: var(--text-light);
+      }
+
+      /* Responsive Layout Framework */
+      .main-container {
+        max-width: 1200px;
+        margin: 60px auto;
+        display: grid;
+        grid-template-columns: 1fr; /* Mobile view: 1 Column */
+        gap: 40px;
+        align-items: start;
+      }
+
+      /* Desktop View Upgrade (min-width: 868px) */
+      @media (min-width: 868px) {
+        .main-container {
+          grid-template-columns: 1.1fr 0.9fr; /* Side-by-side Layout */
+          gap: 80px;
+        }
+      }
+
+      /* Left Column Text Styles */
+      .content-section {
+        padding-right: 0;
+      }
+
+      @media (min-width: 868px) {
+        .content-section {
+          padding-right: 40px;
+        }
+      }
+
+      h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 400;
+        margin-bottom: 10px;
+        color: var(--text-main);
+      }
+
+      .tagline {
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        color: var(--text-light);
+        margin-bottom: 35px;
+        font-style: italic;
+      }
+
+      .bio-text p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin-bottom: 25px;
+        text-align: justify;
+      }
+
+      .clients-section {
+        margin-top: 40px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 30px;
+      }
+
+      .clients-section h2 {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        color: var(--text-main);
+      }
+
+      .clients-section p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+
+      /* Right Column Image Styles */
+      .image-section {
+        width: 100%;
+      }
+
+      .profile-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: grayscale(100%); /* Image looks premium Black & White */
+        object-fit: cover;
+      }
+
+      /* Instagram/Social Icon Placeholder */
+      .social-link {
+        display: inline-block;
+        margin-top: 40px;
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: 1.1rem;
+        border: 1px solid var(--text-main);
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 26px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-title">Manzar alam</div>
+      <div class="logo-subtitle">
+        Medical sutures | devices | wound Managemnet
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Marketing & Event</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Container Split -->
+    <div class="main-container">
+      <!-- Left Side: Copywriting Content -->
+      <main class="content-section">
+        <h1>Meet Manzar alam</h1>
+        <div class="tagline">Adding ease to sergeon's hand.</div>
+
+        <div class="bio-text">
+          <p>
+            Manzar is an reg- pahrmacist, merketing incharge and first line
+            entrepreneur from Gaya ji. She was taught life drawing, graphic
+            design and fashion illustration at the Central Saint Martins, London
+            College of Fashion and The Royal Drawing School in London. She also
+            have a Master of Science in Business and Economics from Lund
+            University.
+          </p>
+
+          <p>
+            Helena mainly works with brands within the fashion, lifestyle and
+            hospitality industries. Craftsmanship and art are close to heart and
+            influence all steps of her creative process. She normally creates
+            everything by hand using traditional mediums such as graphite
+            pencils, ink and watercolour. Designs that need to be printed or
+            published online are digitised and edited in the Adobe Creative
+            Suite.
+          </p>
+
+          <p>
+            Helena lives in Saltsjöbaden in Stockholm with her husband, daughter
+            and twin boys.
+          </p>
+        </div>
+
+        <div class="clients-section">
+          <h2>Selected Clients</h2>
+          <p>
+            Svenskt Tenn, Ett Hem, MaxMara, Gucci, H&M, TOTEME, Björn Axén, Miu
+            Miu, Fotografiska, NK, Uniqlo, Rolex, Talisker Whiskey, Schwarzkopf,
+            Zeta, EQT, Pilsner Urquell, & Other Stories, Åhléns, Nordiska
+            Galleriet, Rose Inc, Mateus, Dyson, NA-KD, Ellos, Hästens Beds, The
+            House of Suntory, Chopard, Ole Henriksen, Boston Consulting Group,
+            Pyrenex and Lisa Yang.
+          </p>
+        </div>
+
+        <a href="#" class="social-link" title="Instagram">📷</a>
+      </main>
+
+      <!-- Right Side: Black and White Visual Aspect Grid -->
+      <section class="image-section">
+        <!-- replace src with your actual image file path -->
+        <img
+          src="small manzar profile image.png"
+          alt="Helena Krüger Artist Profile"
+          class="profile-img"
+        />
+      </section>
+    </div>
+  </body>
+</html>
